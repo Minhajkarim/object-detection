@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Web Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #map {
+            width: 100%;
+            height: 600px;
+        }
+        .popup-image {
+            max-width: 100px;
+            height: auto;
+        }
+        .fa-icon {
+            font-size: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <select id="objectSelector">
+        <option value="all">Show All</option>
+        <option value="Traffic Signal">Traffic Signals</option>
+        <option value="Get in lane sign">Get in lane signs</option>
+        <option value="Street Light">Street Lights</option>
+        <option value="Speed Limit">Speed Limits</option>
+        <option value="Pedestrian Crossing">Pedestrian Crossings</option>
+        <option value="potholes">Potholes</option>
+        <option value="road cracks">Road Cracks</option>
+        <option value="Roundabout Ahead">Roundabout Ahead</option>
+        <option value="Hazard Marker">Hazard Marker</option>
+        <option value="LUCDR">LUCDR</option>
+        <option value="Stop Sign">Stop Sign</option>
+        <option value="Yield Sign">Yield Sign</option>
+        <option value="Parking Sign">Parking Sign</option>
+        <option value="Stop & Turn">Stop & Turn</option>
+        <option value="No Entry">No Entry</option>
+        <option value="Multiple Chevrons Right">Multiple Chevrons Right</option>
+        <option value="U-turn Sign">U-turn Sign</option>
+        <option value="No Stopping Sign">No Stopping Sign</option>
+        <option value="Don't Turn">Don't Turn</option>
+        <option value="Pass Either Side">Pass Either Side</option>
+        <option value="Tree">Tree</option>
+        <!-- Add more options as needed -->
+    </select>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="data.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>
